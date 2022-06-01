@@ -10,7 +10,6 @@ import com.lyni.permission.dialog.RequestDialog
 
 @Suppress("unused")
 class QuickPermission private constructor() {
-    private var request: Request? = null
 
     companion object {
 
@@ -32,6 +31,8 @@ class QuickPermission private constructor() {
             return dialogCreator!!.newInstance()
         }
     }
+
+    private var request: Request? = null
 
     fun request() {
         request?.run {
